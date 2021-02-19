@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USMC Quiz</title>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 <body>
     <div class="High-scores">
         <a href="scores.html">View Highscores</a>
     </div>
-
+    <div id="timer"></div>
     <main id="start">
         <header class="Header">
             <h1>USMC Quiz Challenge</h1>
@@ -31,7 +31,11 @@
     </main>
         <div class="quiz">
             <h2 class="question"></h2>
-            <div class="answers"></div>
+            <ul class="answers">
+                <li id="Choice1"></li>
+                <li id="Choice2"></li>
+                <li id="Choice3"></li>
+            </ul>
 
 
 
@@ -40,7 +44,7 @@
 
 
         </div>
-    <script src="/assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
     
 </body>
 </html>

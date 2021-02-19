@@ -24,19 +24,27 @@ var questions = [
 }
     
 ]
-
+var timer;
+var time = 60;
 function startQuiz(){
-var start = document.getElementsByClassName('start')
+var start = document.getElementById('start')
 start.style.display="none";
+timer=setInterval(runTimer,1000)
 console.log("startQuiz")
-
-
-}
-
-for(var i=0; i <questions.length i++){
-    startQuiz.addEventListener('click');
+runQuiz()
 
 }
+function runQuiz(){
+for(var i=0; i <questions.length; i++){
+var question=document.querySelector(".question")
+
+}
+}
+function runTimer(){
+time--
+document.getElementById("timer").textContent=time;
+}
+
 
 
 
