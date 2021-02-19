@@ -18,7 +18,7 @@ var questions = [        //Created Questions/Answers/Correct Array
 },
 
 {
-    Question:"How much does an M4 weight?",
+    Question:"How much does an M4 weigh?",
     Answers:["8.11 pounds","7.46 pounds","10 lbs","20lbs"],
     Correct:"7.46 pounds"
 }
@@ -36,7 +36,7 @@ console.log("startQuiz")
 runQuiz()
 
 }
-function runQuiz(){       //Created Function to Run Quiz and asking questions b
+function runQuiz(){       //Created Function to Run Quiz and asking questions 
 
 var i = current
 document.querySelector(".question").textContent=questions[i].Question
