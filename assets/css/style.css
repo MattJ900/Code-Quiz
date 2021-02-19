@@ -75,6 +75,10 @@ p {
     color:red;
 }
 
+.answers {
+    display: none;
+}
+
 
 .answers button {
     color: white;

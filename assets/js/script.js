@@ -29,6 +29,8 @@ var time = 60;
 var current=0;
 function startQuiz(){     //Created Function to Start Quiz
 var start = document.getElementById('start')
+var answerDiv = document.querySelector(".answers")
+answerDiv.style.display="block"
 start.style.display="none";
 document.getElementById("timer").textContent=time;
 timer=setInterval(runTimer,1000)
