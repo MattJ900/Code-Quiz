@@ -70,3 +70,13 @@ p {
     color:white;
     float:right;
 }
+
+.question {
+    color:red;
+}
+
+
+.answers {
+    color:white;
+    float:center;
+}

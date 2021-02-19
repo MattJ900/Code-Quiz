@@ -26,26 +26,50 @@ var questions = [
 ]
 var timer;
 var time = 60;
+var current=0;
 function startQuiz(){
 var start = document.getElementById('start')
 start.style.display="none";
+document.getElementById("timer").textContent=time;
 timer=setInterval(runTimer,1000)
 console.log("startQuiz")
 runQuiz()
 
 }
 function runQuiz(){
-for(var i=0; i <questions.length; i++){
-var question=document.querySelector(".question")
 
-}
+var i = current
+document.querySelector(".question").textContent=questions[i].Question
+document.querySelector("#Choice1").textContent=questions[i].Answers[0]
+document.querySelector("#Choice2").textContent=questions[i].Answers[1]
+document.querySelector("#Choice3").textContent=questions[i].Answers[2]
+document.querySelector("#Choice4").textContent=questions[i].Answers[3]
+
 }
 function runTimer(){
 time--
 document.getElementById("timer").textContent=time;
 }
 
+function checkAnswer(event){
+console.log("works");
+var i = current
+var correct = questions[i].Correct
+var userChoice=event.target.textContent
+if (correct!==userChoice){
+time=time-10 
+document.getElementById("timer").textContent=time;
+}
+ current++
+ if (current < questions.length){
+  runQuiz()  
 
+ }else{
+     console.log("GameOver!!");
+     clearInterval(timer);
+ }
+ 
+}
 
 
 
@@ -57,20 +81,7 @@ document.getElementById("start-quiz").addEventListener("click",startQuiz)
 
 
 
-// creae variable array of questions
-
-// than great forloop array 
-
-// object 
-
-
-
-// timer
-
-// question or collection of answers loop through
-
-// once user answers all questions or runs out of time you will give them a game over
-
-// once game over screen ends put in intital and hit submit grabs score and intital and saves it
-
-// have seperate HTML page when
+// game over
+// keep track .textcontent in correct 
+// Gameover input their intials
+// when they submit it saves time score into local
