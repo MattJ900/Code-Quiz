@@ -76,7 +76,11 @@ p {
 }
 
 
-.answers {
-    color:white;
-    float:center;
+.answers button {
+    color: white;
+    background-color: black;
+
 }
+
+
+

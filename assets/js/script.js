@@ -1,4 +1,4 @@
-var questions = [        //Created Questions Answers Correct Array
+var questions = [        //Created Questions/Answers/Correct Array
 {
     Question:"What type of ammunition does a M4 take?",
     Answers:["556mm","25mm","100mm","16mm"],
@@ -24,10 +24,10 @@ var questions = [        //Created Questions Answers Correct Array
 }
     
 ]
-var timer;      //Create to start button quiz
+var timer;      
 var time = 60;
 var current=0;
-function startQuiz(){
+function startQuiz(){     //Created Function to Start Quiz
 var start = document.getElementById('start')
 start.style.display="none";
 document.getElementById("timer").textContent=time;
@@ -36,7 +36,7 @@ console.log("startQuiz")
 runQuiz()
 
 }
-function runQuiz(){      
+function runQuiz(){       //Created Function to Run Quiz and asking questions b
 
 var i = current
 document.querySelector(".question").textContent=questions[i].Question
@@ -46,7 +46,7 @@ document.querySelector("#Choice3").textContent=questions[i].Answers[2]
 document.querySelector("#Choice4").textContent=questions[i].Answers[3]
 
 }
-function runTimer(){
+function runTimer(){       //Created Timer
 time--
 document.getElementById("timer").textContent=time;
 }
